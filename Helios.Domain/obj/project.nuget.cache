@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "dWb6GBMPhgw=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\ozcan\\Projects\\MyGitProject\\helios\\Helios.Domain\\Helios.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ozcan\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\ozcan\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\ozcan\\.nuget\\packages\\npgsql\\8.0.5\\npgsql.8.0.5.nupkg.sha512",
+    "C:\\Users\\ozcan\\.nuget\\packages\\pgvector\\0.3.2\\pgvector.0.3.2.nupkg.sha512"
+  ],
+  "logs": []
+}

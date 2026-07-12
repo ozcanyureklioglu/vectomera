@@ -1,0 +1,13 @@
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\bin\Debug\net9.0\Helios.ServiceDefaults.deps.json
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\bin\Debug\net9.0\Helios.ServiceDefaults.dll
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\bin\Debug\net9.0\Helios.ServiceDefaults.pdb
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\obj\Debug\net9.0\Helios.ServiceDefaults.csproj.AssemblyReference.cache
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\obj\Debug\net9.0\Helios.ServiceDefaults.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\obj\Debug\net9.0\Helios.ServiceDefaults.AssemblyInfoInputs.cache
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\obj\Debug\net9.0\Helios.ServiceDefaults.AssemblyInfo.cs
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\obj\Debug\net9.0\Helios.ServiceDefaults.csproj.CoreCompileInputs.cache
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\obj\Debug\net9.0\Helios.ServiceDefaults.sourcelink.json
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\obj\Debug\net9.0\Helios.ServiceDefaults.dll
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\obj\Debug\net9.0\refint\Helios.ServiceDefaults.dll
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\obj\Debug\net9.0\Helios.ServiceDefaults.pdb
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.ServiceDefaults\obj\Debug\net9.0\ref\Helios.ServiceDefaults.dll

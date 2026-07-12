@@ -1,0 +1,561 @@
+{
+    "Categories": [
+        {
+            "Id": "07ab4fc9-7f4e-424e-9500-4a07ab5d9f46",
+            "Name": "Laptops",
+            "Slug": "laptops"
+        },
+        {
+            "Id": "383fd6a9-3858-42eb-934e-97258336b3c6",
+            "Name": "Smartphones",
+            "Slug": "smartphones"
+        },
+        {
+            "Id": "31041b45-a84f-47dc-83ae-52fd2a68ad74",
+            "Name": "Headphones",
+            "Slug": "headphones"
+        },
+        {
+            "Id": "99ed3d31-da70-4b1e-bc84-dcb1bcaeb0b2",
+            "Name": "Monitors",
+            "Slug": "monitors"
+        },
+        {
+            "Id": "815880d8-f8c2-4818-a744-04862339ff2a",
+            "Name": "Tablets",
+            "Slug": "tablets"
+        }
+    ],
+    "Brands": [
+        {
+            "Id": "0d7b3a27-dd40-4a14-b00b-d6eb50be33ed",
+            "Name": "Apple",
+            "Slug": "apple",
+            "Description": "Consumer electronics and software."
+        },
+        {
+            "Id": "bfebba55-39d5-46c5-808c-d3f84ca3d28a",
+            "Name": "Samsung",
+            "Slug": "samsung",
+            "Description": "Global leader in technology and electronics."
+        },
+        {
+            "Id": "faeeb6e4-8361-42b3-8c0a-7dc483e1608c",
+            "Name": "Asus",
+            "Slug": "asus",
+            "Description": "Computer and phone hardware and electronics."
+        },
+        {
+            "Id": "4517df5e-5789-4ba8-bb92-fa3fc072519b",
+            "Name": "Lenovo",
+            "Slug": "lenovo",
+            "Description": "Personal computers, tablets, and smart devices."
+        },
+        {
+            "Id": "eb753b7c-3a77-4033-9208-43af90bc52f6",
+            "Name": "Sony",
+            "Slug": "sony",
+            "Description": "Electronics, gaming, and entertainment."
+        }
+    ],
+    "Properties": [
+        {
+            "Id": "6815a66b-2ad3-4007-aa19-916316044aea",
+            "Name": "Color"
+        },
+        {
+            "Id": "c54fa6b4-66da-4cd6-806a-438ab878d563",
+            "Name": "RAM"
+        },
+        {
+            "Id": "e6e16feb-51e5-4006-b801-895bcac4bfba",
+            "Name": "Storage"
+        },
+        {
+            "Id": "52e6e57a-4380-415e-a3c6-480f66ead70f",
+            "Name": "Screen Size"
+        }
+    ],
+    "PropertyValues": [
+        {
+            "Id": "a46b1cf3-15a4-4f9c-bfd1-8301fc8312f5",
+            "PropertyId": "6815a66b-2ad3-4007-aa19-916316044aea",
+            "Value": "Black"
+        },
+        {
+            "Id": "b627be83-e1b2-4eb4-b5ee-d08422eded56",
+            "PropertyId": "6815a66b-2ad3-4007-aa19-916316044aea",
+            "Value": "White"
+        },
+        {
+            "Id": "047b6e27-00a6-40d1-998b-0dbb36105f78",
+            "PropertyId": "6815a66b-2ad3-4007-aa19-916316044aea",
+            "Value": "Silver"
+        },
+        {
+            "Id": "66139bbb-7dcc-4ac8-8b38-167f79b66783",
+            "PropertyId": "6815a66b-2ad3-4007-aa19-916316044aea",
+            "Value": "Space Gray"
+        },
+        {
+            "Id": "9fda1b4e-245e-496d-96fa-8f62eb662ed4",
+            "PropertyId": "6815a66b-2ad3-4007-aa19-916316044aea",
+            "Value": "Blue"
+        },
+        {
+            "Id": "84334b64-0ae7-42d8-b4e7-79e0b5bdb777",
+            "PropertyId": "c54fa6b4-66da-4cd6-806a-438ab878d563",
+            "Value": "8GB"
+        },
+        {
+            "Id": "216b0ba3-6a27-4857-b063-a9ac8084895a",
+            "PropertyId": "c54fa6b4-66da-4cd6-806a-438ab878d563",
+            "Value": "16GB"
+        },
+        {
+            "Id": "8876caa0-f1e0-485b-b9f3-7aaa46afb30d",
+            "PropertyId": "c54fa6b4-66da-4cd6-806a-438ab878d563",
+            "Value": "32GB"
+        },
+        {
+            "Id": "e579912e-d31a-4d7b-b8dc-94fdc012bf5c",
+            "PropertyId": "e6e16feb-51e5-4006-b801-895bcac4bfba",
+            "Value": "128GB"
+        },
+        {
+            "Id": "cd0ef2f1-57ec-4df0-bba7-fb8f523090a6",
+            "PropertyId": "e6e16feb-51e5-4006-b801-895bcac4bfba",
+            "Value": "256GB"
+        },
+        {
+            "Id": "0a0249c9-9582-4bf8-bfef-1e0da66cc7cd",
+            "PropertyId": "e6e16feb-51e5-4006-b801-895bcac4bfba",
+            "Value": "512GB"
+        },
+        {
+            "Id": "2f526e11-bb70-43bc-888f-746eba733602",
+            "PropertyId": "e6e16feb-51e5-4006-b801-895bcac4bfba",
+            "Value": "1TB"
+        },
+        {
+            "Id": "3b6d5d13-6c6c-4580-bf9c-03f0faa62655",
+            "PropertyId": "52e6e57a-4380-415e-a3c6-480f66ead70f",
+            "Value": "13.3 inch"
+        },
+        {
+            "Id": "0e134f34-30fa-45da-a42b-47b099809a36",
+            "PropertyId": "52e6e57a-4380-415e-a3c6-480f66ead70f",
+            "Value": "14 inch"
+        },
+        {
+            "Id": "4721c732-2e7f-4d19-99e5-7a8a59a6b003",
+            "PropertyId": "52e6e57a-4380-415e-a3c6-480f66ead70f",
+            "Value": "15.6 inch"
+        },
+        {
+            "Id": "ce38b14c-ffa9-41b8-8dc3-5e462ad3286e",
+            "PropertyId": "52e6e57a-4380-415e-a3c6-480f66ead70f",
+            "Value": "6.1 inch"
+        },
+        {
+            "Id": "3e14ec8a-17f4-4490-b537-d8afef6e12b8",
+            "PropertyId": "52e6e57a-4380-415e-a3c6-480f66ead70f",
+            "Value": "6.7 inch"
+        },
+        {
+            "Id": "94f4579b-c04b-425b-bf4f-2158b26bd17d",
+            "PropertyId": "52e6e57a-4380-415e-a3c6-480f66ead70f",
+            "Value": "27 inch"
+        }
+    ],
+    "Products": [
+        {
+            "Id": "b21b3e84-e9ba-49fb-a682-b3554d6cf9f3",
+            "Name": "MacBook Pro M3",
+            "Sku": "APP-1000",
+            "Slug": "macbook-pro-m3",
+            "Description": "High quality MacBook Pro M3 from Apple.",
+            "SearchText": "macbook pro m3 apple laptops",
+            "BrandId": "0d7b3a27-dd40-4a14-b00b-d6eb50be33ed",
+            "CategoryId": "07ab4fc9-7f4e-424e-9500-4a07ab5d9f46",
+            "ProductProperties": [
+                {
+                    "ProductId": "b21b3e84-e9ba-49fb-a682-b3554d6cf9f3",
+                    "PropertyValueId": "9fda1b4e-245e-496d-96fa-8f62eb662ed4"
+                },
+                {
+                    "ProductId": "b21b3e84-e9ba-49fb-a682-b3554d6cf9f3",
+                    "PropertyValueId": "e579912e-d31a-4d7b-b8dc-94fdc012bf5c"
+                },
+                {
+                    "ProductId": "b21b3e84-e9ba-49fb-a682-b3554d6cf9f3",
+                    "PropertyValueId": "84334b64-0ae7-42d8-b4e7-79e0b5bdb777"
+                }
+            ]
+        },
+        {
+            "Id": "b8ddb074-3502-48bd-93bb-5dd6da35fa1e",
+            "Name": "MacBook Air M2",
+            "Sku": "APP-1001",
+            "Slug": "macbook-air-m2",
+            "Description": "High quality MacBook Air M2 from Apple.",
+            "SearchText": "macbook air m2 apple laptops",
+            "BrandId": "0d7b3a27-dd40-4a14-b00b-d6eb50be33ed",
+            "CategoryId": "07ab4fc9-7f4e-424e-9500-4a07ab5d9f46",
+            "ProductProperties": [
+                {
+                    "ProductId": "b8ddb074-3502-48bd-93bb-5dd6da35fa1e",
+                    "PropertyValueId": "216b0ba3-6a27-4857-b063-a9ac8084895a"
+                },
+                {
+                    "ProductId": "b8ddb074-3502-48bd-93bb-5dd6da35fa1e",
+                    "PropertyValueId": "047b6e27-00a6-40d1-998b-0dbb36105f78"
+                },
+                {
+                    "ProductId": "b8ddb074-3502-48bd-93bb-5dd6da35fa1e",
+                    "PropertyValueId": "0a0249c9-9582-4bf8-bfef-1e0da66cc7cd"
+                }
+            ]
+        },
+        {
+            "Id": "cecb6f8f-d6c0-449d-954d-2510e7908b0b",
+            "Name": "iPhone 15 Pro",
+            "Sku": "APP-1002",
+            "Slug": "iphone-15-pro",
+            "Description": "High quality iPhone 15 Pro from Apple.",
+            "SearchText": "iphone 15 pro apple smartphones",
+            "BrandId": "0d7b3a27-dd40-4a14-b00b-d6eb50be33ed",
+            "CategoryId": "383fd6a9-3858-42eb-934e-97258336b3c6",
+            "ProductProperties": [
+                {
+                    "ProductId": "cecb6f8f-d6c0-449d-954d-2510e7908b0b",
+                    "PropertyValueId": "216b0ba3-6a27-4857-b063-a9ac8084895a"
+                },
+                {
+                    "ProductId": "cecb6f8f-d6c0-449d-954d-2510e7908b0b",
+                    "PropertyValueId": "66139bbb-7dcc-4ac8-8b38-167f79b66783"
+                },
+                {
+                    "ProductId": "cecb6f8f-d6c0-449d-954d-2510e7908b0b",
+                    "PropertyValueId": "2f526e11-bb70-43bc-888f-746eba733602"
+                }
+            ]
+        },
+        {
+            "Id": "13780aa3-9d41-4776-9673-79446ff52dcb",
+            "Name": "iPhone 14",
+            "Sku": "APP-1003",
+            "Slug": "iphone-14",
+            "Description": "High quality iPhone 14 from Apple.",
+            "SearchText": "iphone 14 apple smartphones",
+            "BrandId": "0d7b3a27-dd40-4a14-b00b-d6eb50be33ed",
+            "CategoryId": "383fd6a9-3858-42eb-934e-97258336b3c6",
+            "ProductProperties": [
+                {
+                    "ProductId": "13780aa3-9d41-4776-9673-79446ff52dcb",
+                    "PropertyValueId": "0a0249c9-9582-4bf8-bfef-1e0da66cc7cd"
+                },
+                {
+                    "ProductId": "13780aa3-9d41-4776-9673-79446ff52dcb",
+                    "PropertyValueId": "a46b1cf3-15a4-4f9c-bfd1-8301fc8312f5"
+                }
+            ]
+        },
+        {
+            "Id": "f99747f0-d5b3-4871-b828-9fb15ed8b62c",
+            "Name": "iPad Air",
+            "Sku": "APP-1004",
+            "Slug": "ipad-air",
+            "Description": "High quality iPad Air from Apple.",
+            "SearchText": "ipad air apple tablets",
+            "BrandId": "0d7b3a27-dd40-4a14-b00b-d6eb50be33ed",
+            "CategoryId": "815880d8-f8c2-4818-a744-04862339ff2a",
+            "ProductProperties": [
+                {
+                    "ProductId": "f99747f0-d5b3-4871-b828-9fb15ed8b62c",
+                    "PropertyValueId": "047b6e27-00a6-40d1-998b-0dbb36105f78"
+                },
+                {
+                    "ProductId": "f99747f0-d5b3-4871-b828-9fb15ed8b62c",
+                    "PropertyValueId": "84334b64-0ae7-42d8-b4e7-79e0b5bdb777"
+                }
+            ]
+        },
+        {
+            "Id": "e46bdabb-e16a-46cd-a3c3-c44beda1b4fd",
+            "Name": "Galaxy S24 Ultra",
+            "Sku": "SAM-1005",
+            "Slug": "galaxy-s24-ultra",
+            "Description": "High quality Galaxy S24 Ultra from Samsung.",
+            "SearchText": "galaxy s24 ultra samsung smartphones",
+            "BrandId": "bfebba55-39d5-46c5-808c-d3f84ca3d28a",
+            "CategoryId": "383fd6a9-3858-42eb-934e-97258336b3c6",
+            "ProductProperties": [
+                {
+                    "ProductId": "e46bdabb-e16a-46cd-a3c3-c44beda1b4fd",
+                    "PropertyValueId": "9fda1b4e-245e-496d-96fa-8f62eb662ed4"
+                },
+                {
+                    "ProductId": "e46bdabb-e16a-46cd-a3c3-c44beda1b4fd",
+                    "PropertyValueId": "216b0ba3-6a27-4857-b063-a9ac8084895a"
+                }
+            ]
+        },
+        {
+            "Id": "553b36d3-8d34-4488-8067-5cd06dc3b2b9",
+            "Name": "Galaxy S23",
+            "Sku": "SAM-1006",
+            "Slug": "galaxy-s23",
+            "Description": "High quality Galaxy S23 from Samsung.",
+            "SearchText": "galaxy s23 samsung smartphones",
+            "BrandId": "bfebba55-39d5-46c5-808c-d3f84ca3d28a",
+            "CategoryId": "383fd6a9-3858-42eb-934e-97258336b3c6",
+            "ProductProperties": [
+                {
+                    "ProductId": "553b36d3-8d34-4488-8067-5cd06dc3b2b9",
+                    "PropertyValueId": "66139bbb-7dcc-4ac8-8b38-167f79b66783"
+                },
+                {
+                    "ProductId": "553b36d3-8d34-4488-8067-5cd06dc3b2b9",
+                    "PropertyValueId": "2f526e11-bb70-43bc-888f-746eba733602"
+                },
+                {
+                    "ProductId": "553b36d3-8d34-4488-8067-5cd06dc3b2b9",
+                    "PropertyValueId": "84334b64-0ae7-42d8-b4e7-79e0b5bdb777"
+                }
+            ]
+        },
+        {
+            "Id": "6129918e-8ef1-43b1-a0d4-76ceb73765e5",
+            "Name": "Galaxy Tab S9",
+            "Sku": "SAM-1007",
+            "Slug": "galaxy-tab-s9",
+            "Description": "High quality Galaxy Tab S9 from Samsung.",
+            "SearchText": "galaxy tab s9 samsung tablets",
+            "BrandId": "bfebba55-39d5-46c5-808c-d3f84ca3d28a",
+            "CategoryId": "815880d8-f8c2-4818-a744-04862339ff2a",
+            "ProductProperties": [
+                {
+                    "ProductId": "6129918e-8ef1-43b1-a0d4-76ceb73765e5",
+                    "PropertyValueId": "9fda1b4e-245e-496d-96fa-8f62eb662ed4"
+                },
+                {
+                    "ProductId": "6129918e-8ef1-43b1-a0d4-76ceb73765e5",
+                    "PropertyValueId": "e579912e-d31a-4d7b-b8dc-94fdc012bf5c"
+                },
+                {
+                    "ProductId": "6129918e-8ef1-43b1-a0d4-76ceb73765e5",
+                    "PropertyValueId": "216b0ba3-6a27-4857-b063-a9ac8084895a"
+                }
+            ]
+        },
+        {
+            "Id": "8049a37a-49b4-4296-a5dd-3eaf2a96c6b6",
+            "Name": "Odyssey G7",
+            "Sku": "SAM-1008",
+            "Slug": "odyssey-g7",
+            "Description": "High quality Odyssey G7 from Samsung.",
+            "SearchText": "odyssey g7 samsung monitors",
+            "BrandId": "bfebba55-39d5-46c5-808c-d3f84ca3d28a",
+            "CategoryId": "99ed3d31-da70-4b1e-bc84-dcb1bcaeb0b2",
+            "ProductProperties": [
+                {
+                    "ProductId": "8049a37a-49b4-4296-a5dd-3eaf2a96c6b6",
+                    "PropertyValueId": "66139bbb-7dcc-4ac8-8b38-167f79b66783"
+                },
+                {
+                    "ProductId": "8049a37a-49b4-4296-a5dd-3eaf2a96c6b6",
+                    "PropertyValueId": "ce38b14c-ffa9-41b8-8dc3-5e462ad3286e"
+                }
+            ]
+        },
+        {
+            "Id": "e386ce01-4206-42c7-bec3-2ea95b37d8ad",
+            "Name": "ROG Zephyrus",
+            "Sku": "ASU-1009",
+            "Slug": "rog-zephyrus",
+            "Description": "High quality ROG Zephyrus from Asus.",
+            "SearchText": "rog zephyrus asus laptops",
+            "BrandId": "faeeb6e4-8361-42b3-8c0a-7dc483e1608c",
+            "CategoryId": "07ab4fc9-7f4e-424e-9500-4a07ab5d9f46",
+            "ProductProperties": [
+                {
+                    "ProductId": "e386ce01-4206-42c7-bec3-2ea95b37d8ad",
+                    "PropertyValueId": "e579912e-d31a-4d7b-b8dc-94fdc012bf5c"
+                },
+                {
+                    "ProductId": "e386ce01-4206-42c7-bec3-2ea95b37d8ad",
+                    "PropertyValueId": "8876caa0-f1e0-485b-b9f3-7aaa46afb30d"
+                },
+                {
+                    "ProductId": "e386ce01-4206-42c7-bec3-2ea95b37d8ad",
+                    "PropertyValueId": "b627be83-e1b2-4eb4-b5ee-d08422eded56"
+                }
+            ]
+        },
+        {
+            "Id": "5ed6c503-f4f2-48d5-a322-a3346da9a2f3",
+            "Name": "ZenBook 14",
+            "Sku": "ASU-1010",
+            "Slug": "zenbook-14",
+            "Description": "High quality ZenBook 14 from Asus.",
+            "SearchText": "zenbook 14 asus laptops",
+            "BrandId": "faeeb6e4-8361-42b3-8c0a-7dc483e1608c",
+            "CategoryId": "07ab4fc9-7f4e-424e-9500-4a07ab5d9f46",
+            "ProductProperties": [
+                {
+                    "ProductId": "5ed6c503-f4f2-48d5-a322-a3346da9a2f3",
+                    "PropertyValueId": "2f526e11-bb70-43bc-888f-746eba733602"
+                },
+                {
+                    "ProductId": "5ed6c503-f4f2-48d5-a322-a3346da9a2f3",
+                    "PropertyValueId": "b627be83-e1b2-4eb4-b5ee-d08422eded56"
+                },
+                {
+                    "ProductId": "5ed6c503-f4f2-48d5-a322-a3346da9a2f3",
+                    "PropertyValueId": "84334b64-0ae7-42d8-b4e7-79e0b5bdb777"
+                }
+            ]
+        },
+        {
+            "Id": "d5d81531-198d-4d63-8e50-2df57d53c7ce",
+            "Name": "TUF Gaming Monitor",
+            "Sku": "ASU-1011",
+            "Slug": "tuf-gaming-monitor",
+            "Description": "High quality TUF Gaming Monitor from Asus.",
+            "SearchText": "tuf gaming monitor asus monitors",
+            "BrandId": "faeeb6e4-8361-42b3-8c0a-7dc483e1608c",
+            "CategoryId": "99ed3d31-da70-4b1e-bc84-dcb1bcaeb0b2",
+            "ProductProperties": [
+                {
+                    "ProductId": "d5d81531-198d-4d63-8e50-2df57d53c7ce",
+                    "PropertyValueId": "3e14ec8a-17f4-4490-b537-d8afef6e12b8"
+                },
+                {
+                    "ProductId": "d5d81531-198d-4d63-8e50-2df57d53c7ce",
+                    "PropertyValueId": "9fda1b4e-245e-496d-96fa-8f62eb662ed4"
+                }
+            ]
+        },
+        {
+            "Id": "fc4e6152-2148-4606-a2ea-feaf6f8ea6f7",
+            "Name": "ThinkPad X1 Carbon",
+            "Sku": "LEN-1012",
+            "Slug": "thinkpad-x1-carbon",
+            "Description": "High quality ThinkPad X1 Carbon from Lenovo.",
+            "SearchText": "thinkpad x1 carbon lenovo laptops",
+            "BrandId": "4517df5e-5789-4ba8-bb92-fa3fc072519b",
+            "CategoryId": "07ab4fc9-7f4e-424e-9500-4a07ab5d9f46",
+            "ProductProperties": [
+                {
+                    "ProductId": "fc4e6152-2148-4606-a2ea-feaf6f8ea6f7",
+                    "PropertyValueId": "0a0249c9-9582-4bf8-bfef-1e0da66cc7cd"
+                },
+                {
+                    "ProductId": "fc4e6152-2148-4606-a2ea-feaf6f8ea6f7",
+                    "PropertyValueId": "047b6e27-00a6-40d1-998b-0dbb36105f78"
+                }
+            ]
+        },
+        {
+            "Id": "f715f0e9-b27d-45eb-b44a-6dbcabeedfa6",
+            "Name": "Legion 5 Pro",
+            "Sku": "LEN-1013",
+            "Slug": "legion-5-pro",
+            "Description": "High quality Legion 5 Pro from Lenovo.",
+            "SearchText": "legion 5 pro lenovo laptops",
+            "BrandId": "4517df5e-5789-4ba8-bb92-fa3fc072519b",
+            "CategoryId": "07ab4fc9-7f4e-424e-9500-4a07ab5d9f46",
+            "ProductProperties": [
+                {
+                    "ProductId": "f715f0e9-b27d-45eb-b44a-6dbcabeedfa6",
+                    "PropertyValueId": "0a0249c9-9582-4bf8-bfef-1e0da66cc7cd"
+                },
+                {
+                    "ProductId": "f715f0e9-b27d-45eb-b44a-6dbcabeedfa6",
+                    "PropertyValueId": "047b6e27-00a6-40d1-998b-0dbb36105f78"
+                },
+                {
+                    "ProductId": "f715f0e9-b27d-45eb-b44a-6dbcabeedfa6",
+                    "PropertyValueId": "8876caa0-f1e0-485b-b9f3-7aaa46afb30d"
+                }
+            ]
+        },
+        {
+            "Id": "052cb78a-3b7a-4fa0-a269-73cf61b6ecec",
+            "Name": "Tab P11",
+            "Sku": "LEN-1014",
+            "Slug": "tab-p11",
+            "Description": "High quality Tab P11 from Lenovo.",
+            "SearchText": "tab p11 lenovo tablets",
+            "BrandId": "4517df5e-5789-4ba8-bb92-fa3fc072519b",
+            "CategoryId": "815880d8-f8c2-4818-a744-04862339ff2a",
+            "ProductProperties": [
+                {
+                    "ProductId": "052cb78a-3b7a-4fa0-a269-73cf61b6ecec",
+                    "PropertyValueId": "cd0ef2f1-57ec-4df0-bba7-fb8f523090a6"
+                },
+                {
+                    "ProductId": "052cb78a-3b7a-4fa0-a269-73cf61b6ecec",
+                    "PropertyValueId": "a46b1cf3-15a4-4f9c-bfd1-8301fc8312f5"
+                },
+                {
+                    "ProductId": "052cb78a-3b7a-4fa0-a269-73cf61b6ecec",
+                    "PropertyValueId": "84334b64-0ae7-42d8-b4e7-79e0b5bdb777"
+                }
+            ]
+        },
+        {
+            "Id": "eef17a82-8f1f-415a-8a3b-edf3d5373be8",
+            "Name": "WH-1000XM5",
+            "Sku": "SON-1015",
+            "Slug": "wh-1000xm5",
+            "Description": "High quality WH-1000XM5 from Sony.",
+            "SearchText": "wh-1000xm5 sony headphones",
+            "BrandId": "eb753b7c-3a77-4033-9208-43af90bc52f6",
+            "CategoryId": "31041b45-a84f-47dc-83ae-52fd2a68ad74",
+            "ProductProperties": [
+                {
+                    "ProductId": "eef17a82-8f1f-415a-8a3b-edf3d5373be8",
+                    "PropertyValueId": "9fda1b4e-245e-496d-96fa-8f62eb662ed4"
+                }
+            ]
+        },
+        {
+            "Id": "4ffe34ba-84f7-44ee-a237-f9781176f5ce",
+            "Name": "WF-1000XM4",
+            "Sku": "SON-1016",
+            "Slug": "wf-1000xm4",
+            "Description": "High quality WF-1000XM4 from Sony.",
+            "SearchText": "wf-1000xm4 sony headphones",
+            "BrandId": "eb753b7c-3a77-4033-9208-43af90bc52f6",
+            "CategoryId": "31041b45-a84f-47dc-83ae-52fd2a68ad74",
+            "ProductProperties": [
+                {
+                    "ProductId": "4ffe34ba-84f7-44ee-a237-f9781176f5ce",
+                    "PropertyValueId": "b627be83-e1b2-4eb4-b5ee-d08422eded56"
+                }
+            ]
+        },
+        {
+            "Id": "e8f6986d-ee7c-4860-8fef-77390fd7d394",
+            "Name": "Inzone M9",
+            "Sku": "SON-1017",
+            "Slug": "inzone-m9",
+            "Description": "High quality Inzone M9 from Sony.",
+            "SearchText": "inzone m9 sony monitors",
+            "BrandId": "eb753b7c-3a77-4033-9208-43af90bc52f6",
+            "CategoryId": "99ed3d31-da70-4b1e-bc84-dcb1bcaeb0b2",
+            "ProductProperties": [
+                {
+                    "ProductId": "e8f6986d-ee7c-4860-8fef-77390fd7d394",
+                    "PropertyValueId": "4721c732-2e7f-4d19-99e5-7a8a59a6b003"
+                },
+                {
+                    "ProductId": "e8f6986d-ee7c-4860-8fef-77390fd7d394",
+                    "PropertyValueId": "b627be83-e1b2-4eb4-b5ee-d08422eded56"
+                }
+            ]
+        }
+    ]
+}

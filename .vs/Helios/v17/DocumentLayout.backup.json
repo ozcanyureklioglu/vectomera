@@ -1,0 +1,79 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ozcan\\Projects\\MyGitProject\\helios\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{322C4A73-FD43-4271-8717-B1495D239657}|Helios.Worker\\Helios.Worker.csproj|c:\\users\\ozcan\\projects\\mygitproject\\helios\\helios.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{322C4A73-FD43-4271-8717-B1495D239657}|Helios.Worker\\Helios.Worker.csproj|solutionrelative:helios.worker\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{322C4A73-FD43-4271-8717-B1495D239657}|Helios.Worker\\Helios.Worker.csproj|c:\\users\\ozcan\\projects\\mygitproject\\helios\\helios.worker\\consumers\\productembeddingconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{322C4A73-FD43-4271-8717-B1495D239657}|Helios.Worker\\Helios.Worker.csproj|solutionrelative:helios.worker\\consumers\\productembeddingconsumer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{687B95D1-566A-4172-BC4C-52D87133A95C}|Helios.Infrastructure\\Helios.Infrastructure.csproj|c:\\users\\ozcan\\projects\\mygitproject\\helios\\helios.infrastructure\\services\\semantickernelembeddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{687B95D1-566A-4172-BC4C-52D87133A95C}|Helios.Infrastructure\\Helios.Infrastructure.csproj|solutionrelative:helios.infrastructure\\services\\semantickernelembeddingservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ozcan\\Projects\\MyGitProject\\helios\\Helios.Worker\\Program.cs",
+              "RelativeDocumentMoniker": "Helios.Worker\\Program.cs",
+              "ToolTip": "C:\\Users\\ozcan\\Projects\\MyGitProject\\helios\\Helios.Worker\\Program.cs",
+              "RelativeToolTip": "Helios.Worker\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T13:59:22.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProductEmbeddingConsumer.cs",
+              "DocumentMoniker": "C:\\Users\\ozcan\\Projects\\MyGitProject\\helios\\Helios.Worker\\Consumers\\ProductEmbeddingConsumer.cs",
+              "RelativeDocumentMoniker": "Helios.Worker\\Consumers\\ProductEmbeddingConsumer.cs",
+              "ToolTip": "C:\\Users\\ozcan\\Projects\\MyGitProject\\helios\\Helios.Worker\\Consumers\\ProductEmbeddingConsumer.cs",
+              "RelativeToolTip": "Helios.Worker\\Consumers\\ProductEmbeddingConsumer.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T13:54:27.901Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SemanticKernelEmbeddingService.cs",
+              "DocumentMoniker": "C:\\Users\\ozcan\\Projects\\MyGitProject\\helios\\Helios.Infrastructure\\Services\\SemanticKernelEmbeddingService.cs",
+              "RelativeDocumentMoniker": "Helios.Infrastructure\\Services\\SemanticKernelEmbeddingService.cs",
+              "ToolTip": "C:\\Users\\ozcan\\Projects\\MyGitProject\\helios\\Helios.Infrastructure\\Services\\SemanticKernelEmbeddingService.cs",
+              "RelativeToolTip": "Helios.Infrastructure\\Services\\SemanticKernelEmbeddingService.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAABQAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-12T13:37:32.383Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

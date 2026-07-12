@@ -1,0 +1,13 @@
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\bin\Debug\net9.0\Helios.Domain.deps.json
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\bin\Debug\net9.0\Helios.Domain.dll
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\bin\Debug\net9.0\Helios.Domain.pdb
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\obj\Debug\net9.0\Helios.Domain.csproj.AssemblyReference.cache
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\obj\Debug\net9.0\Helios.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\obj\Debug\net9.0\Helios.Domain.AssemblyInfoInputs.cache
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\obj\Debug\net9.0\Helios.Domain.AssemblyInfo.cs
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\obj\Debug\net9.0\Helios.Domain.csproj.CoreCompileInputs.cache
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\obj\Debug\net9.0\Helios.Domain.sourcelink.json
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\obj\Debug\net9.0\Helios.Domain.dll
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\obj\Debug\net9.0\refint\Helios.Domain.dll
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\obj\Debug\net9.0\Helios.Domain.pdb
+C:\Users\ozcan\Projects\MyGitProject\helios\Helios.Domain\obj\Debug\net9.0\ref\Helios.Domain.dll

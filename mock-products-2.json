@@ -1,0 +1,628 @@
+{
+    "Categories": [
+        {
+            "Id": "3975b0c2-c1f1-4e31-8932-0389b2b1ba8a",
+            "Name": "T-Shirts",
+            "Slug": "t-shirts"
+        },
+        {
+            "Id": "b15d4ba5-4620-4435-9794-79f759474ed5",
+            "Name": "Pants & Jeans",
+            "Slug": "pants-jeans"
+        },
+        {
+            "Id": "886bfacb-d564-446f-bd28-4783eea89d01",
+            "Name": "Jackets",
+            "Slug": "jackets"
+        },
+        {
+            "Id": "d2c0d10b-bbd1-47f5-909c-446cf49049e4",
+            "Name": "Sweaters",
+            "Slug": "sweaters"
+        },
+        {
+            "Id": "1dde3725-955f-44a3-b2dd-0d8abe3427f3",
+            "Name": "Activewear",
+            "Slug": "activewear"
+        }
+    ],
+    "Brands": [
+        {
+            "Id": "d9380e10-6150-43fe-8f30-5fd883810ee3",
+            "Name": "Zara",
+            "Slug": "zara",
+            "Description": "Fast fashion and trendy clothing."
+        },
+        {
+            "Id": "7cbc1262-99c3-4fea-a949-8f27d2300b23",
+            "Name": "H&M",
+            "Slug": "hmm",
+            "Description": "Accessible everyday apparel and basics."
+        },
+        {
+            "Id": "dd60c720-c292-46c7-9b35-c85e7b518a10",
+            "Name": "Levi's",
+            "Slug": "levis",
+            "Description": "Classic denim and casual wear."
+        },
+        {
+            "Id": "f329011d-8b69-4ea8-911b-32c831738e1b",
+            "Name": "Nike",
+            "Slug": "nike",
+            "Description": "Innovative sportswear and athletic apparel."
+        },
+        {
+            "Id": "6dd3cdcc-c776-4952-b53d-46476d2e8d94",
+            "Name": "Adidas",
+            "Slug": "adidas",
+            "Description": "Performance sports clothing and streetwear."
+        }
+    ],
+    "Properties": [
+        {
+            "Id": "4e6b0c92-6d6a-4c16-9982-45372814d6b7",
+            "Name": "Size"
+        },
+        {
+            "Id": "30ecc309-6d2e-40ae-b2c3-3770c9d303dc",
+            "Name": "Color"
+        },
+        {
+            "Id": "1ee4b544-523f-4a1f-aacf-89f80ff52080",
+            "Name": "Material"
+        },
+        {
+            "Id": "fdcadcbf-d236-47c3-ab8e-5c5c269b5eb3",
+            "Name": "Fit"
+        }
+    ],
+    "PropertyValues": [
+        {
+            "Id": "a47a3bd0-e22c-4fac-9878-03db49dae728",
+            "PropertyId": "4e6b0c92-6d6a-4c16-9982-45372814d6b7",
+            "Value": "XS"
+        },
+        {
+            "Id": "987cd1c4-beb5-4dbd-aa9d-27819b4b9a37",
+            "PropertyId": "4e6b0c92-6d6a-4c16-9982-45372814d6b7",
+            "Value": "S"
+        },
+        {
+            "Id": "1fd1a08b-044a-426a-8c61-f06dd42546b9",
+            "PropertyId": "4e6b0c92-6d6a-4c16-9982-45372814d6b7",
+            "Value": "M"
+        },
+        {
+            "Id": "c268a7e9-6bab-4755-96ce-956452534a05",
+            "PropertyId": "4e6b0c92-6d6a-4c16-9982-45372814d6b7",
+            "Value": "L"
+        },
+        {
+            "Id": "c16b336c-ce69-4198-9c2a-49ac206d1adc",
+            "PropertyId": "4e6b0c92-6d6a-4c16-9982-45372814d6b7",
+            "Value": "XL"
+        },
+        {
+            "Id": "156872ce-2f3e-43d9-897b-1bbad73eaa7b",
+            "PropertyId": "4e6b0c92-6d6a-4c16-9982-45372814d6b7",
+            "Value": "XXL"
+        },
+        {
+            "Id": "d4feb1b4-f73f-4408-bb0f-f2d4915560fe",
+            "PropertyId": "30ecc309-6d2e-40ae-b2c3-3770c9d303dc",
+            "Value": "Black"
+        },
+        {
+            "Id": "57984add-733e-42a9-824c-f35708736021",
+            "PropertyId": "30ecc309-6d2e-40ae-b2c3-3770c9d303dc",
+            "Value": "White"
+        },
+        {
+            "Id": "d7bbf0dc-6de4-491a-bb04-848c276cc875",
+            "PropertyId": "30ecc309-6d2e-40ae-b2c3-3770c9d303dc",
+            "Value": "Navy Blue"
+        },
+        {
+            "Id": "1e32c1db-9e0e-4e70-a23c-863570d1d8c6",
+            "PropertyId": "30ecc309-6d2e-40ae-b2c3-3770c9d303dc",
+            "Value": "Grey"
+        },
+        {
+            "Id": "88b9d693-224b-4be5-ba85-453761a1eb73",
+            "PropertyId": "30ecc309-6d2e-40ae-b2c3-3770c9d303dc",
+            "Value": "Red"
+        },
+        {
+            "Id": "ff062dab-12de-49af-9323-fa24eb9b9676",
+            "PropertyId": "30ecc309-6d2e-40ae-b2c3-3770c9d303dc",
+            "Value": "Olive Green"
+        },
+        {
+            "Id": "7c7aa65d-31e6-41c2-950c-055cb7523de3",
+            "PropertyId": "1ee4b544-523f-4a1f-aacf-89f80ff52080",
+            "Value": "100% Cotton"
+        },
+        {
+            "Id": "6dac5c68-ed89-4408-8b90-b299e9b4ab50",
+            "PropertyId": "1ee4b544-523f-4a1f-aacf-89f80ff52080",
+            "Value": "Denim"
+        },
+        {
+            "Id": "6cb33eca-056c-4747-93d4-ecb288eea59a",
+            "PropertyId": "1ee4b544-523f-4a1f-aacf-89f80ff52080",
+            "Value": "Polyester"
+        },
+        {
+            "Id": "fdf64528-c5fd-4d70-bda6-8fea9f756db9",
+            "PropertyId": "1ee4b544-523f-4a1f-aacf-89f80ff52080",
+            "Value": "Wool Blend"
+        },
+        {
+            "Id": "545bb056-07a7-4e8c-a81f-46703d256de4",
+            "PropertyId": "1ee4b544-523f-4a1f-aacf-89f80ff52080",
+            "Value": "Fleece"
+        },
+        {
+            "Id": "37a9e4d3-cd2e-4c3e-8bf2-21deb70620af",
+            "PropertyId": "fdcadcbf-d236-47c3-ab8e-5c5c269b5eb3",
+            "Value": "Slim Fit"
+        },
+        {
+            "Id": "a366f2a4-c11e-4a5e-a44c-58081e62d341",
+            "PropertyId": "fdcadcbf-d236-47c3-ab8e-5c5c269b5eb3",
+            "Value": "Regular Fit"
+        },
+        {
+            "Id": "35224ee7-bd4a-49b8-bfc8-31efb6c425bd",
+            "PropertyId": "fdcadcbf-d236-47c3-ab8e-5c5c269b5eb3",
+            "Value": "Oversized"
+        },
+        {
+            "Id": "e98419ab-a811-4851-99f2-68855b7c609b",
+            "PropertyId": "fdcadcbf-d236-47c3-ab8e-5c5c269b5eb3",
+            "Value": "Relaxed Fit"
+        }
+    ],
+    "Products": [
+        {
+            "Id": "a885087b-c9bb-40c9-b2ca-5f4766c18a35",
+            "Name": "Basic Cotton T-Shirt",
+            "Sku": "ZAR-TXT-1000",
+            "Slug": "basic-cotton-t-shirt",
+            "Description": "Stylish Basic Cotton T-Shirt from Zara. Perfect for your daily outfit.",
+            "SearchText": "basic cotton t-shirt zara t-shirts",
+            "BrandId": "d9380e10-6150-43fe-8f30-5fd883810ee3",
+            "CategoryId": "3975b0c2-c1f1-4e31-8932-0389b2b1ba8a",
+            "ProductProperties": [
+                {
+                    "ProductId": "a885087b-c9bb-40c9-b2ca-5f4766c18a35",
+                    "PropertyValueId": "987cd1c4-beb5-4dbd-aa9d-27819b4b9a37"
+                },
+                {
+                    "ProductId": "a885087b-c9bb-40c9-b2ca-5f4766c18a35",
+                    "PropertyValueId": "a366f2a4-c11e-4a5e-a44c-58081e62d341"
+                },
+                {
+                    "ProductId": "a885087b-c9bb-40c9-b2ca-5f4766c18a35",
+                    "PropertyValueId": "fdf64528-c5fd-4d70-bda6-8fea9f756db9"
+                },
+                {
+                    "ProductId": "a885087b-c9bb-40c9-b2ca-5f4766c18a35",
+                    "PropertyValueId": "1e32c1db-9e0e-4e70-a23c-863570d1d8c6"
+                }
+            ]
+        },
+        {
+            "Id": "897779a8-3b3e-4d76-9fab-a3342e715f30",
+            "Name": "Oversized Graphic Tee",
+            "Sku": "ZAR-TXT-1001",
+            "Slug": "oversized-graphic-tee",
+            "Description": "Stylish Oversized Graphic Tee from Zara. Perfect for your daily outfit.",
+            "SearchText": "oversized graphic tee zara t-shirts",
+            "BrandId": "d9380e10-6150-43fe-8f30-5fd883810ee3",
+            "CategoryId": "3975b0c2-c1f1-4e31-8932-0389b2b1ba8a",
+            "ProductProperties": [
+                {
+                    "ProductId": "897779a8-3b3e-4d76-9fab-a3342e715f30",
+                    "PropertyValueId": "e98419ab-a811-4851-99f2-68855b7c609b"
+                },
+                {
+                    "ProductId": "897779a8-3b3e-4d76-9fab-a3342e715f30",
+                    "PropertyValueId": "6cb33eca-056c-4747-93d4-ecb288eea59a"
+                },
+                {
+                    "ProductId": "897779a8-3b3e-4d76-9fab-a3342e715f30",
+                    "PropertyValueId": "a47a3bd0-e22c-4fac-9878-03db49dae728"
+                }
+            ]
+        },
+        {
+            "Id": "96d72a21-a146-46ea-a0c1-bc95e2d00a90",
+            "Name": "Mom Fit Jeans",
+            "Sku": "ZAR-TXT-1002",
+            "Slug": "mom-fit-jeans",
+            "Description": "Stylish Mom Fit Jeans from Zara. Perfect for your daily outfit.",
+            "SearchText": "mom fit jeans zara pants & jeans",
+            "BrandId": "d9380e10-6150-43fe-8f30-5fd883810ee3",
+            "CategoryId": "b15d4ba5-4620-4435-9794-79f759474ed5",
+            "ProductProperties": [
+                {
+                    "ProductId": "96d72a21-a146-46ea-a0c1-bc95e2d00a90",
+                    "PropertyValueId": "6dac5c68-ed89-4408-8b90-b299e9b4ab50"
+                },
+                {
+                    "ProductId": "96d72a21-a146-46ea-a0c1-bc95e2d00a90",
+                    "PropertyValueId": "a47a3bd0-e22c-4fac-9878-03db49dae728"
+                },
+                {
+                    "ProductId": "96d72a21-a146-46ea-a0c1-bc95e2d00a90",
+                    "PropertyValueId": "57984add-733e-42a9-824c-f35708736021"
+                }
+            ]
+        },
+        {
+            "Id": "51b68233-e62a-4b9c-aec8-e1c575c7c82b",
+            "Name": "Faux Leather Biker Jacket",
+            "Sku": "ZAR-TXT-1003",
+            "Slug": "faux-leather-biker-jacket",
+            "Description": "Stylish Faux Leather Biker Jacket from Zara. Perfect for your daily outfit.",
+            "SearchText": "faux leather biker jacket zara jackets",
+            "BrandId": "d9380e10-6150-43fe-8f30-5fd883810ee3",
+            "CategoryId": "886bfacb-d564-446f-bd28-4783eea89d01",
+            "ProductProperties": [
+                {
+                    "ProductId": "51b68233-e62a-4b9c-aec8-e1c575c7c82b",
+                    "PropertyValueId": "d7bbf0dc-6de4-491a-bb04-848c276cc875"
+                },
+                {
+                    "ProductId": "51b68233-e62a-4b9c-aec8-e1c575c7c82b",
+                    "PropertyValueId": "a366f2a4-c11e-4a5e-a44c-58081e62d341"
+                },
+                {
+                    "ProductId": "51b68233-e62a-4b9c-aec8-e1c575c7c82b",
+                    "PropertyValueId": "6dac5c68-ed89-4408-8b90-b299e9b4ab50"
+                },
+                {
+                    "ProductId": "51b68233-e62a-4b9c-aec8-e1c575c7c82b",
+                    "PropertyValueId": "987cd1c4-beb5-4dbd-aa9d-27819b4b9a37"
+                }
+            ]
+        },
+        {
+            "Id": "b9cdb787-aee9-4950-ad12-a662fd6890dd",
+            "Name": "Chunky Knit Sweater",
+            "Sku": "H&M-TXT-1004",
+            "Slug": "chunky-knit-sweater",
+            "Description": "Stylish Chunky Knit Sweater from H&M. Perfect for your daily outfit.",
+            "SearchText": "chunky knit sweater h&m sweaters",
+            "BrandId": "7cbc1262-99c3-4fea-a949-8f27d2300b23",
+            "CategoryId": "d2c0d10b-bbd1-47f5-909c-446cf49049e4",
+            "ProductProperties": [
+                {
+                    "ProductId": "b9cdb787-aee9-4950-ad12-a662fd6890dd",
+                    "PropertyValueId": "d4feb1b4-f73f-4408-bb0f-f2d4915560fe"
+                },
+                {
+                    "ProductId": "b9cdb787-aee9-4950-ad12-a662fd6890dd",
+                    "PropertyValueId": "a47a3bd0-e22c-4fac-9878-03db49dae728"
+                }
+            ]
+        },
+        {
+            "Id": "634f7d7a-4c59-4af3-8a4b-f47aff5c9416",
+            "Name": "Slim Fit Chino Pants",
+            "Sku": "H&M-TXT-1005",
+            "Slug": "slim-fit-chino-pants",
+            "Description": "Stylish Slim Fit Chino Pants from H&M. Perfect for your daily outfit.",
+            "SearchText": "slim fit chino pants h&m pants & jeans",
+            "BrandId": "7cbc1262-99c3-4fea-a949-8f27d2300b23",
+            "CategoryId": "b15d4ba5-4620-4435-9794-79f759474ed5",
+            "ProductProperties": [
+                {
+                    "ProductId": "634f7d7a-4c59-4af3-8a4b-f47aff5c9416",
+                    "PropertyValueId": "987cd1c4-beb5-4dbd-aa9d-27819b4b9a37"
+                },
+                {
+                    "ProductId": "634f7d7a-4c59-4af3-8a4b-f47aff5c9416",
+                    "PropertyValueId": "6dac5c68-ed89-4408-8b90-b299e9b4ab50"
+                },
+                {
+                    "ProductId": "634f7d7a-4c59-4af3-8a4b-f47aff5c9416",
+                    "PropertyValueId": "37a9e4d3-cd2e-4c3e-8bf2-21deb70620af"
+                }
+            ]
+        },
+        {
+            "Id": "f1ec529f-f647-4141-a4a4-f0d52b1896db",
+            "Name": "Zip-Up Hoodie",
+            "Sku": "H&M-TXT-1006",
+            "Slug": "zip-up-hoodie",
+            "Description": "Stylish Zip-Up Hoodie from H&M. Perfect for your daily outfit.",
+            "SearchText": "zip-up hoodie h&m sweaters",
+            "BrandId": "7cbc1262-99c3-4fea-a949-8f27d2300b23",
+            "CategoryId": "d2c0d10b-bbd1-47f5-909c-446cf49049e4",
+            "ProductProperties": [
+                {
+                    "ProductId": "f1ec529f-f647-4141-a4a4-f0d52b1896db",
+                    "PropertyValueId": "1fd1a08b-044a-426a-8c61-f06dd42546b9"
+                },
+                {
+                    "ProductId": "f1ec529f-f647-4141-a4a4-f0d52b1896db",
+                    "PropertyValueId": "57984add-733e-42a9-824c-f35708736021"
+                }
+            ]
+        },
+        {
+            "Id": "26443c95-2d16-4650-b10b-fe8cfdb60a92",
+            "Name": "Puffer Winter Jacket",
+            "Sku": "H&M-TXT-1007",
+            "Slug": "puffer-winter-jacket",
+            "Description": "Stylish Puffer Winter Jacket from H&M. Perfect for your daily outfit.",
+            "SearchText": "puffer winter jacket h&m jackets",
+            "BrandId": "7cbc1262-99c3-4fea-a949-8f27d2300b23",
+            "CategoryId": "886bfacb-d564-446f-bd28-4783eea89d01",
+            "ProductProperties": [
+                {
+                    "ProductId": "26443c95-2d16-4650-b10b-fe8cfdb60a92",
+                    "PropertyValueId": "88b9d693-224b-4be5-ba85-453761a1eb73"
+                },
+                {
+                    "ProductId": "26443c95-2d16-4650-b10b-fe8cfdb60a92",
+                    "PropertyValueId": "c268a7e9-6bab-4755-96ce-956452534a05"
+                },
+                {
+                    "ProductId": "26443c95-2d16-4650-b10b-fe8cfdb60a92",
+                    "PropertyValueId": "6dac5c68-ed89-4408-8b90-b299e9b4ab50"
+                }
+            ]
+        },
+        {
+            "Id": "ad5f3cf3-ba42-4fb4-928c-1b1878f09fe9",
+            "Name": "501 Original Fit Jeans",
+            "Sku": "LEV-TXT-1008",
+            "Slug": "501-original-fit-jeans",
+            "Description": "Stylish 501 Original Fit Jeans from Levi's. Perfect for your daily outfit.",
+            "SearchText": "501 original fit jeans levi's pants & jeans",
+            "BrandId": "dd60c720-c292-46c7-9b35-c85e7b518a10",
+            "CategoryId": "b15d4ba5-4620-4435-9794-79f759474ed5",
+            "ProductProperties": [
+                {
+                    "ProductId": "ad5f3cf3-ba42-4fb4-928c-1b1878f09fe9",
+                    "PropertyValueId": "c268a7e9-6bab-4755-96ce-956452534a05"
+                },
+                {
+                    "ProductId": "ad5f3cf3-ba42-4fb4-928c-1b1878f09fe9",
+                    "PropertyValueId": "e98419ab-a811-4851-99f2-68855b7c609b"
+                },
+                {
+                    "ProductId": "ad5f3cf3-ba42-4fb4-928c-1b1878f09fe9",
+                    "PropertyValueId": "d4feb1b4-f73f-4408-bb0f-f2d4915560fe"
+                }
+            ]
+        },
+        {
+            "Id": "a88fe193-c8b5-4a02-9144-13838d11f776",
+            "Name": "Denim Trucker Jacket",
+            "Sku": "LEV-TXT-1009",
+            "Slug": "denim-trucker-jacket",
+            "Description": "Stylish Denim Trucker Jacket from Levi's. Perfect for your daily outfit.",
+            "SearchText": "denim trucker jacket levi's jackets",
+            "BrandId": "dd60c720-c292-46c7-9b35-c85e7b518a10",
+            "CategoryId": "886bfacb-d564-446f-bd28-4783eea89d01",
+            "ProductProperties": [
+                {
+                    "ProductId": "a88fe193-c8b5-4a02-9144-13838d11f776",
+                    "PropertyValueId": "37a9e4d3-cd2e-4c3e-8bf2-21deb70620af"
+                },
+                {
+                    "ProductId": "a88fe193-c8b5-4a02-9144-13838d11f776",
+                    "PropertyValueId": "156872ce-2f3e-43d9-897b-1bbad73eaa7b"
+                },
+                {
+                    "ProductId": "a88fe193-c8b5-4a02-9144-13838d11f776",
+                    "PropertyValueId": "545bb056-07a7-4e8c-a81f-46703d256de4"
+                },
+                {
+                    "ProductId": "a88fe193-c8b5-4a02-9144-13838d11f776",
+                    "PropertyValueId": "57984add-733e-42a9-824c-f35708736021"
+                }
+            ]
+        },
+        {
+            "Id": "32ad850a-7218-4029-9890-868f4d752cee",
+            "Name": "Vintage Logo T-Shirt",
+            "Sku": "LEV-TXT-1010",
+            "Slug": "vintage-logo-t-shirt",
+            "Description": "Stylish Vintage Logo T-Shirt from Levi's. Perfect for your daily outfit.",
+            "SearchText": "vintage logo t-shirt levi's t-shirts",
+            "BrandId": "dd60c720-c292-46c7-9b35-c85e7b518a10",
+            "CategoryId": "3975b0c2-c1f1-4e31-8932-0389b2b1ba8a",
+            "ProductProperties": [
+                {
+                    "ProductId": "32ad850a-7218-4029-9890-868f4d752cee",
+                    "PropertyValueId": "fdf64528-c5fd-4d70-bda6-8fea9f756db9"
+                },
+                {
+                    "ProductId": "32ad850a-7218-4029-9890-868f4d752cee",
+                    "PropertyValueId": "1e32c1db-9e0e-4e70-a23c-863570d1d8c6"
+                },
+                {
+                    "ProductId": "32ad850a-7218-4029-9890-868f4d752cee",
+                    "PropertyValueId": "156872ce-2f3e-43d9-897b-1bbad73eaa7b"
+                },
+                {
+                    "ProductId": "32ad850a-7218-4029-9890-868f4d752cee",
+                    "PropertyValueId": "35224ee7-bd4a-49b8-bfc8-31efb6c425bd"
+                }
+            ]
+        },
+        {
+            "Id": "e458adab-898c-4fde-883f-03323cc83ad9",
+            "Name": "Dri-FIT Training Tee",
+            "Sku": "NIK-TXT-1011",
+            "Slug": "dri-fit-training-tee",
+            "Description": "Stylish Dri-FIT Training Tee from Nike. Perfect for your daily outfit.",
+            "SearchText": "dri-fit training tee nike activewear",
+            "BrandId": "f329011d-8b69-4ea8-911b-32c831738e1b",
+            "CategoryId": "1dde3725-955f-44a3-b2dd-0d8abe3427f3",
+            "ProductProperties": [
+                {
+                    "ProductId": "e458adab-898c-4fde-883f-03323cc83ad9",
+                    "PropertyValueId": "6cb33eca-056c-4747-93d4-ecb288eea59a"
+                },
+                {
+                    "ProductId": "e458adab-898c-4fde-883f-03323cc83ad9",
+                    "PropertyValueId": "c16b336c-ce69-4198-9c2a-49ac206d1adc"
+                },
+                {
+                    "ProductId": "e458adab-898c-4fde-883f-03323cc83ad9",
+                    "PropertyValueId": "d4feb1b4-f73f-4408-bb0f-f2d4915560fe"
+                }
+            ]
+        },
+        {
+            "Id": "e468b33b-f915-433c-9514-fa82379a2b4c",
+            "Name": "Sportswear Tech Fleece",
+            "Sku": "NIK-TXT-1012",
+            "Slug": "sportswear-tech-fleece",
+            "Description": "Stylish Sportswear Tech Fleece from Nike. Perfect for your daily outfit.",
+            "SearchText": "sportswear tech fleece nike jackets",
+            "BrandId": "f329011d-8b69-4ea8-911b-32c831738e1b",
+            "CategoryId": "886bfacb-d564-446f-bd28-4783eea89d01",
+            "ProductProperties": [
+                {
+                    "ProductId": "e468b33b-f915-433c-9514-fa82379a2b4c",
+                    "PropertyValueId": "a366f2a4-c11e-4a5e-a44c-58081e62d341"
+                },
+                {
+                    "ProductId": "e468b33b-f915-433c-9514-fa82379a2b4c",
+                    "PropertyValueId": "1e32c1db-9e0e-4e70-a23c-863570d1d8c6"
+                },
+                {
+                    "ProductId": "e468b33b-f915-433c-9514-fa82379a2b4c",
+                    "PropertyValueId": "987cd1c4-beb5-4dbd-aa9d-27819b4b9a37"
+                }
+            ]
+        },
+        {
+            "Id": "2fe4c757-fe74-413c-bc90-a1b1e0728b4f",
+            "Name": "Pro Compression Tights",
+            "Sku": "NIK-TXT-1013",
+            "Slug": "pro-compression-tights",
+            "Description": "Stylish Pro Compression Tights from Nike. Perfect for your daily outfit.",
+            "SearchText": "pro compression tights nike activewear",
+            "BrandId": "f329011d-8b69-4ea8-911b-32c831738e1b",
+            "CategoryId": "1dde3725-955f-44a3-b2dd-0d8abe3427f3",
+            "ProductProperties": [
+                {
+                    "ProductId": "2fe4c757-fe74-413c-bc90-a1b1e0728b4f",
+                    "PropertyValueId": "6cb33eca-056c-4747-93d4-ecb288eea59a"
+                },
+                {
+                    "ProductId": "2fe4c757-fe74-413c-bc90-a1b1e0728b4f",
+                    "PropertyValueId": "d7bbf0dc-6de4-491a-bb04-848c276cc875"
+                },
+                {
+                    "ProductId": "2fe4c757-fe74-413c-bc90-a1b1e0728b4f",
+                    "PropertyValueId": "a47a3bd0-e22c-4fac-9878-03db49dae728"
+                }
+            ]
+        },
+        {
+            "Id": "52f62218-6722-425b-9426-825d17d448e0",
+            "Name": "Club Fleece Sweatpants",
+            "Sku": "NIK-TXT-1014",
+            "Slug": "club-fleece-sweatpants",
+            "Description": "Stylish Club Fleece Sweatpants from Nike. Perfect for your daily outfit.",
+            "SearchText": "club fleece sweatpants nike pants & jeans",
+            "BrandId": "f329011d-8b69-4ea8-911b-32c831738e1b",
+            "CategoryId": "b15d4ba5-4620-4435-9794-79f759474ed5",
+            "ProductProperties": [
+                {
+                    "ProductId": "52f62218-6722-425b-9426-825d17d448e0",
+                    "PropertyValueId": "7c7aa65d-31e6-41c2-950c-055cb7523de3"
+                },
+                {
+                    "ProductId": "52f62218-6722-425b-9426-825d17d448e0",
+                    "PropertyValueId": "a47a3bd0-e22c-4fac-9878-03db49dae728"
+                },
+                {
+                    "ProductId": "52f62218-6722-425b-9426-825d17d448e0",
+                    "PropertyValueId": "88b9d693-224b-4be5-ba85-453761a1eb73"
+                },
+                {
+                    "ProductId": "52f62218-6722-425b-9426-825d17d448e0",
+                    "PropertyValueId": "a366f2a4-c11e-4a5e-a44c-58081e62d341"
+                }
+            ]
+        },
+        {
+            "Id": "59bc5428-6446-4f77-afed-4051aa91d031",
+            "Name": "Originals Trefoil T-Shirt",
+            "Sku": "ADI-TXT-1015",
+            "Slug": "originals-trefoil-t-shirt",
+            "Description": "Stylish Originals Trefoil T-Shirt from Adidas. Perfect for your daily outfit.",
+            "SearchText": "originals trefoil t-shirt adidas t-shirts",
+            "BrandId": "6dd3cdcc-c776-4952-b53d-46476d2e8d94",
+            "CategoryId": "3975b0c2-c1f1-4e31-8932-0389b2b1ba8a",
+            "ProductProperties": [
+                {
+                    "ProductId": "59bc5428-6446-4f77-afed-4051aa91d031",
+                    "PropertyValueId": "7c7aa65d-31e6-41c2-950c-055cb7523de3"
+                },
+                {
+                    "ProductId": "59bc5428-6446-4f77-afed-4051aa91d031",
+                    "PropertyValueId": "a366f2a4-c11e-4a5e-a44c-58081e62d341"
+                },
+                {
+                    "ProductId": "59bc5428-6446-4f77-afed-4051aa91d031",
+                    "PropertyValueId": "d7bbf0dc-6de4-491a-bb04-848c276cc875"
+                }
+            ]
+        },
+        {
+            "Id": "e667c946-ad00-4c8e-826f-2469a91e6f80",
+            "Name": "Tiro 23 Track Pants",
+            "Sku": "ADI-TXT-1016",
+            "Slug": "tiro-23-track-pants",
+            "Description": "Stylish Tiro 23 Track Pants from Adidas. Perfect for your daily outfit.",
+            "SearchText": "tiro 23 track pants adidas activewear",
+            "BrandId": "6dd3cdcc-c776-4952-b53d-46476d2e8d94",
+            "CategoryId": "1dde3725-955f-44a3-b2dd-0d8abe3427f3",
+            "ProductProperties": [
+                {
+                    "ProductId": "e667c946-ad00-4c8e-826f-2469a91e6f80",
+                    "PropertyValueId": "ff062dab-12de-49af-9323-fa24eb9b9676"
+                },
+                {
+                    "ProductId": "e667c946-ad00-4c8e-826f-2469a91e6f80",
+                    "PropertyValueId": "6cb33eca-056c-4747-93d4-ecb288eea59a"
+                },
+                {
+                    "ProductId": "e667c946-ad00-4c8e-826f-2469a91e6f80",
+                    "PropertyValueId": "156872ce-2f3e-43d9-897b-1bbad73eaa7b"
+                }
+            ]
+        },
+        {
+            "Id": "3c716367-ce33-42a4-97d0-ff60e9f1ed6b",
+            "Name": "Essentials French Terry",
+            "Sku": "ADI-TXT-1017",
+            "Slug": "essentials-french-terry",
+            "Description": "Stylish Essentials French Terry from Adidas. Perfect for your daily outfit.",
+            "SearchText": "essentials french terry adidas sweaters",
+            "BrandId": "6dd3cdcc-c776-4952-b53d-46476d2e8d94",
+            "CategoryId": "d2c0d10b-bbd1-47f5-909c-446cf49049e4",
+            "ProductProperties": [
+                {
+                    "ProductId": "3c716367-ce33-42a4-97d0-ff60e9f1ed6b",
+                    "PropertyValueId": "a47a3bd0-e22c-4fac-9878-03db49dae728"
+                },
+                {
+                    "ProductId": "3c716367-ce33-42a4-97d0-ff60e9f1ed6b",
+                    "PropertyValueId": "d4feb1b4-f73f-4408-bb0f-f2d4915560fe"
+                }
+            ]
+        }
+    ]
+}
