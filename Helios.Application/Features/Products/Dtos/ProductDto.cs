@@ -1,4 +1,4 @@
-namespace Helios.Application.Features.Products.Queries.GetProducts;
+namespace Helios.Application.Features.Products.Dtos;
 
 public record ProductDto(
     Guid Id,

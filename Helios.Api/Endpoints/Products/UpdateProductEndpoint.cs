@@ -1,6 +1,6 @@
 using Helios.Api.Abstractions;
-using Helios.Application.Features.Products.Commands.UpdateProduct;
-using MediatR;
+using Helios.Application.Common.Interfaces;
+using Helios.Application.Features.Products.Requests;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,16 +12,13 @@ public class UpdateProductEndpoint : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPut("/products/{id:guid}", async (Guid id, [FromBody] UpdateProductCommand command, IMediator mediator, CancellationToken cancellationToken) =>
+        app.MapPut("/products/{id:guid}", async (Guid id, [FromBody] UpdateProductRequest request, IProductService productService, CancellationToken cancellationToken) =>
         {
-            command.Id = id; // Set ID from route
-            var response = await mediator.Send(command, cancellationToken);
-            
+            var response = await productService.UpdateProductAsync(id, request, cancellationToken);
+
             if (response.Success)
-            {
                 return Results.Ok(response);
-            }
-            
+
             return Results.BadRequest(response);
         })
         .WithName("UpdateProduct")

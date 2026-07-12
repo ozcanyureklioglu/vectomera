@@ -1,6 +1,6 @@
 using Helios.Api.Abstractions;
-using Helios.Application.Features.Products.Queries.GetProducts;
-using MediatR;
+using Helios.Application.Common.Interfaces;
+using Helios.Application.Features.Products.Dtos;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,11 +12,9 @@ public class GetProductsEndpoint : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapGet("/products", async ([FromQuery] string? searchText, IMediator mediator, CancellationToken cancellationToken) =>
+        app.MapGet("/products", async ([FromQuery] string? searchText, IProductService productService, CancellationToken cancellationToken) =>
         {
-            var query = new GetProductsQuery(searchText);
-            var response = await mediator.Send(query, cancellationToken);
-            
+            var response = await productService.GetProductsAsync(searchText, cancellationToken);
             return Results.Ok(response);
         })
         .WithName("GetProducts")

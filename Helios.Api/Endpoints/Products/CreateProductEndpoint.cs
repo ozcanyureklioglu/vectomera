@@ -1,6 +1,6 @@
 using Helios.Api.Abstractions;
-using Helios.Application.Features.Products.Commands.CreateProduct;
-using MediatR;
+using Helios.Application.Common.Interfaces;
+using Helios.Application.Features.Products.Requests;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
@@ -11,15 +11,13 @@ public class CreateProductEndpoint : IEndpoint
 {
     public void MapEndpoint(IEndpointRouteBuilder app)
     {
-        app.MapPost("/products", async (CreateProductCommand command, IMediator mediator, CancellationToken cancellationToken) =>
+        app.MapPost("/products", async (CreateProductRequest request, IProductService productService, CancellationToken cancellationToken) =>
         {
-            var response = await mediator.Send(command, cancellationToken);
-            
+            var response = await productService.CreateProductAsync(request, cancellationToken);
+
             if (response.Success)
-            {
                 return Results.Ok(response);
-            }
-            
+
             return Results.BadRequest(response);
         })
         .WithName("CreateProduct")

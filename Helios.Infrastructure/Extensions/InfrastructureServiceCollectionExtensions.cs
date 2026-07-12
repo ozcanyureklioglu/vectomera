@@ -13,7 +13,7 @@ public static class InfrastructureServiceCollectionExtensions
         services.AddDbContext<AppDbContext>(options =>
             options.UseNpgsql(
                 configuration.GetConnectionString("DefaultConnection"),
-                b => 
+                b =>
                 {
                     b.MigrationsAssembly(typeof(AppDbContext).Assembly.FullName);
                     b.UseVector();
@@ -21,6 +21,7 @@ public static class InfrastructureServiceCollectionExtensions
 
         services.AddScoped<Helios.Application.Common.Interfaces.IAppDbContext>(provider => provider.GetRequiredService<AppDbContext>());
         services.AddScoped<Helios.Application.Common.Interfaces.ITextEmbeddingService, Helios.Infrastructure.Services.SemanticKernelEmbeddingService>();
+        services.AddScoped<Helios.Application.Common.Interfaces.IProductService, Helios.Infrastructure.Services.ProductService>();
 
         return services;
     }
