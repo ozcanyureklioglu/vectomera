@@ -53,32 +53,53 @@ public class AiService : IAiService
             var queryVector = new Vector(queryEmbedding);
 
             var topProductChunks = await _context.ProductVectorChunks
+                .Include(x => x.Product)
                 .OrderBy(x => x.Embedding!.L2Distance(queryVector))
-                .Select(x => x.ChunkText)
                 .Take(3)
                 .ToListAsync(cancellationToken);
 
             var topInventoryChunks = await _context.WarehouseInventoryVectorChunks
+                .Include(x => x.WarehouseInventory)
+                    .ThenInclude(wi => wi.Product)
+                .Include(x => x.WarehouseInventory)
+                    .ThenInclude(wi => wi.Warehouse)
                 .OrderBy(x => x.Embedding!.L2Distance(queryVector))
-                .Select(x => x.ChunkText)
                 .Take(3)
                 .ToListAsync(cancellationToken);
 
             var topReviewChunks = await _context.ProductReviewVectorChunks
+                .Include(x => x.ProductReview)
+                    .ThenInclude(pr => pr.Product)
+                .Include(x => x.ProductReview)
+                    .ThenInclude(pr => pr.Warehouse)
                 .OrderBy(x => x.Embedding!.L2Distance(queryVector))
-                .Select(x => x.ChunkText)
                 .Take(3)
                 .ToListAsync(cancellationToken);
 
             var contextBuilder = new StringBuilder();
             contextBuilder.AppendLine("--- Ürün Bilgileri ---");
-            foreach (var chunk in topProductChunks) contextBuilder.AppendLine(chunk);
+            foreach (var chunk in topProductChunks)
+            {
+                contextBuilder.AppendLine($"[Ürün: {chunk.Product.Name} | Stok Kodu (SKU): {chunk.Product.Sku}]");
+                contextBuilder.AppendLine($"Açıklama: {chunk.ChunkText}\n");
+            }
 
-            contextBuilder.AppendLine("\n--- Stok Bilgileri ---");
-            foreach (var chunk in topInventoryChunks) contextBuilder.AppendLine(chunk);
+            contextBuilder.AppendLine("--- Stok Bilgileri ---");
+            foreach (var chunk in topInventoryChunks)
+            {
+                var wi = chunk.WarehouseInventory;
+                contextBuilder.AppendLine($"[Depo: {wi.Warehouse.Name} ({wi.Warehouse.CityName}) | Ürün: {wi.Product.Name} | SKU: {wi.Product.Sku}]");
+                contextBuilder.AppendLine($"Stok/Fiyat Detayı: {chunk.ChunkText}\n");
+            }
 
-            contextBuilder.AppendLine("\n--- Ürün Yorumları ---");
-            foreach (var chunk in topReviewChunks) contextBuilder.AppendLine(chunk);
+            contextBuilder.AppendLine("--- Ürün Yorumları ---");
+            foreach (var chunk in topReviewChunks)
+            {
+                var pr = chunk.ProductReview;
+                var warehouseInfo = pr.Warehouse != null ? $" | Depo: {pr.Warehouse.Name}" : "";
+                contextBuilder.AppendLine($"[Ürün: {pr.Product.Name} | SKU: {pr.Product.Sku}{warehouseInfo}]");
+                contextBuilder.AppendLine($"Yorum Detayı: {chunk.ChunkText}\n");
+            }
 
             var chatHistory = new ChatHistory();
             chatHistory.AddSystemMessage("Sen Helios e-ticaret/depo sisteminin akıllı bir asistanısın. Lütfen kullanıcının sorusunu sadece aşağıda verilen 'Bağlam (Context)' bilgilerini kullanarak cevapla.Not kullanıcının sorduğu dile göre cevap ver(İngilizce,Türkçe vb.)");

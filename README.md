@@ -8,27 +8,27 @@
   <img src="https://img.shields.io/badge/Semantic%20Kernel-AI-742774?style=for-the-badge" />
 </p>
 
-**Helios**, ürün kataloğu, depo envanter yönetimi ve ürün yorumlarını bir arada sunan, yapay zeka destekli bir e-ticaret / stok yönetim platformudur. Sistemin kalbi olan **RAG (Retrieval-Augmented Generation)** altyapısı sayesinde tüm veriler üzerinde **anlamsal arama** ve **akıllı analiz** yapılabilir.
+**Helios** is an AI-powered e-commerce and inventory management platform that unifies product catalogs, warehouse inventory management, and product reviews. Powered by a robust **RAG (Retrieval-Augmented Generation)** infrastructure, it enables **semantic search** and **intelligent data analysis** across all domain entities.
 
 ---
 
-## 🏗️ Mimari Genel Bakış
+## 🏗️ Architecture Overview
 
-Proje, **Clean Architecture** prensipleri ve **.NET Aspire** orkestrasyonu üzerine inşa edilmiştir.
+The project is built upon **Clean Architecture** principles and orchestrated using **.NET Aspire**.
 
 ```
 Helios.sln
 ├── Helios.AppHost          → .NET Aspire Orchestrator (Api + Worker)
 ├── Helios.Api              → REST API (Minimal API Endpoints)
-├── Helios.Application      → İş kuralları, Arayüzler, DTO'lar, Validasyonlar
-├── Helios.Domain           → Entity modelleri, BaseEntity
-├── Helios.Infrastructure   → EF Core, Servisler, Ollama/SK entegrasyonu
-├── Helios.Worker           → Arka plan tüketicileri (MassTransit Consumers)
-├── Helios.ServiceDefaults  → Ortak Aspire yapılandırması
+├── Helios.Application      → Business rules, Interfaces, DTOs, Validations
+├── Helios.Domain           → Entity models, BaseEntity
+├── Helios.Infrastructure   → EF Core, Services, Ollama/SK Integrations
+├── Helios.Worker           → Background consumers (MassTransit)
+├── Helios.ServiceDefaults  → Shared Aspire configurations
 └── docker-compose.yml      → PostgreSQL (pgvector) + RabbitMQ
 ```
 
-### Katman Bağımlılık Akışı
+### Layer Dependency Flow
 
 ```mermaid
 graph TD
@@ -45,11 +45,11 @@ graph TD
 
 ## 🤖 RAG (Retrieval-Augmented Generation) Pipeline
 
-Helios'un AI yeteneklerinin temelinde **RAG** mimarisi bulunur. Bu akış, kullanıcı sorusunu anlamsal olarak en alakalı veritabanı kayıtlarıyla birleştirerek LLM'e gönderir ve bağlam odaklı, hallüsinasyon riski düşük cevaplar üretir.
+The core of Helios' AI capabilities lies within its **RAG** architecture. This flow semantically matches user queries with the most relevant database records, passing them to the LLM as context to generate highly accurate, context-aware, and hallucination-free responses.
 
 ```mermaid
 sequenceDiagram
-    participant User as 👤 Kullanıcı
+    participant User as 👤 User
     participant API as Helios.Api
     participant AI as AiService
     participant EMB as EmbeddingService
@@ -64,32 +64,32 @@ sequenceDiagram
     EMB-->>AI: float[] queryVector
 
     Note over AI,PG: 2️⃣ Retrieval (Vector Search)
-    AI->>PG: L2Distance araması (Top-3 × 3 tablo)
-    PG-->>AI: En alakalı chunk metinleri
+    AI->>PG: L2Distance search (Top-3 × 3 tables)
+    PG-->>AI: Most relevant chunk texts
 
     Note over AI,LLM: 3️⃣ Generation
-    AI->>LLM: System Prompt + Context + Soru
-    LLM-->>AI: Sentezlenmiş cevap
+    AI->>LLM: System Prompt + Context + Query
+    LLM-->>AI: Synthesized Response
     
     AI-->>API: AiAdviceResponse
     API-->>User: 200 OK { answer }
 ```
 
-### Vektör Arama Tabloları
+### Vector Search Tables
 
-Sorgu vektörü, aşağıdaki **3 farklı VectorChunk** tablosunda `L2Distance` (Öklid mesafesi) ile aranır ve her birinden en yakın **3 kayıt** getirilir:
+The query vector is searched across the following **3 distinct VectorChunk** tables using `L2Distance` (Euclidean distance), retrieving the top **3 nearest records** from each:
 
-| Tablo | Kaynak Veri | Açıklama |
+| Table | Source Data | Description |
 |---|---|---|
-| `ProductVectorChunks` | Ürün açıklamaları | Ürün detay bilgilerine dayalı semantik parçalar |
-| `WarehouseInventoryVectorChunks` | Envanter açıklamaları | Stok ve depo bilgilerine dayalı semantik parçalar |
-| `ProductReviewVectorChunks` | Ürün yorumları | Kullanıcı puanı, başlığı ve yorumuna dayalı semantik parçalar |
+| `ProductVectorChunks` | Product Descriptions | Semantic chunks based on product details |
+| `WarehouseInventoryVectorChunks` | Inventory Descriptions | Semantic chunks based on stock and warehouse details |
+| `ProductReviewVectorChunks` | Product Reviews | Semantic chunks based on user rating, title, and comments |
 
 ---
 
-## ⚙️ Embedding & Chunking Akışı
+## ⚙️ Embedding & Chunking Flow
 
-Veri oluşturma anında (ürün, envanter, yorum) otomatik olarak arka planda **embedding** ve **chunking** işlemleri tetiklenir.
+Whenever new data is created (product, inventory, or review), **embedding** and **chunking** processes are automatically triggered in the background.
 
 ```mermaid
 flowchart LR
@@ -137,20 +137,20 @@ flowchart LR
     CS --> T3
 ```
 
-### Süreç Detayı
+### Process Details
 
-1. **API** üzerinden veri kaydedilir ve `MassTransit (Publish)` ile RabbitMQ kuyruğuna bir event gönderilir.
-2. **Worker** tarafındaki Consumer bu event'i dinler.
-3. **SemanticKernelEmbeddingService** metni `TextChunker` ile paragraflara böler (chunk), ardından Ollama'nın `nomic-embed-text` modeli ile her bir chunk'ı bir vektör dizisine (`float[]`) dönüştürür.
-4. **ChunkService** oluşturulan vektör parçalarını (`VectorChunk`) PostgreSQL'deki `pgvector` sütununa kaydeder.
+1. **API** saves the data and publishes an event to the RabbitMQ queue using `MassTransit (Publish)`.
+2. A Consumer in the **Worker** listens to this event.
+3. **SemanticKernelEmbeddingService** splits the text into paragraphs (chunks) using `TextChunker`, and then converts each chunk into a vector array (`float[]`) using Ollama's `nomic-embed-text` model.
+4. **ChunkService** saves the generated vector chunks (`VectorChunk`) into the corresponding `pgvector` columns in PostgreSQL.
 
-> **Yorum Embedding Formatı:**
-> Ürün yorumları chunking öncesi şu formatta birleştirilir:
-> `"Puan: {Point}/5. Başlık: {Title}. Yorum: {Description}"`
+> **Review Embedding Format:**
+> Before chunking, product reviews are formatted as follows:
+> `"Point: {Point}/5. Title: {Title}. Comment: {Description}"`
 
 ---
 
-## 🗄️ Domain Modeli
+## 🗄️ Domain Model
 
 ```mermaid
 erDiagram
@@ -218,101 +218,101 @@ erDiagram
 
 ---
 
-## 🛣️ API Endpoint'leri
+## 🛣️ API Endpoints
 
-### Ürün Yönetimi (`/products`)
-| Method | Endpoint | Açıklama |
+### Product Management (`/products`)
+| Method | Endpoint | Description |
 |---|---|---|
-| `POST` | `/products` | Yeni ürün oluşturur, ardından embedding event'i publish eder |
-| `PUT` | `/products/{id}` | Mevcut ürünü günceller |
-| `GET` | `/products` | Ürünleri listeler |
+| `POST` | `/products` | Creates a new product and publishes an embedding event |
+| `PUT` | `/products/{id}` | Updates an existing product |
+| `GET` | `/products` | Lists products |
 
-### Depo Envanter Yönetimi (`/warehouse-inventories`)
-| Method | Endpoint | Açıklama |
+### Warehouse Inventory Management (`/warehouse-inventories`)
+| Method | Endpoint | Description |
 |---|---|---|
-| `POST` | `/warehouse-inventories` | **Toplu (Bulk)** envanter kaydı oluşturur (Partial Success destekli) |
-| `GET` | `/warehouse-inventories` | Envanter bilgilerini listeler |
+| `POST` | `/warehouse-inventories` | **Bulk** creates inventory records (Supports Partial Success) |
+| `GET` | `/warehouse-inventories` | Lists inventory information |
 
-### Ürün Yorumları (`/product-reviews`)
-| Method | Endpoint | Açıklama |
+### Product Reviews (`/product-reviews`)
+| Method | Endpoint | Description |
 |---|---|---|
-| `POST` | `/product-reviews` | **Toplu (Bulk)** ürün yorumu kaydı oluşturur |
+| `POST` | `/product-reviews` | **Bulk** creates product review records |
 
-### Yapay Zeka Asistanı (`/ai`)
-| Method | Endpoint | Açıklama |
+### AI Assistant (`/ai`)
+| Method | Endpoint | Description |
 |---|---|---|
-| `POST` | `/ai/advice` | RAG tabanlı anlamsal soru-cevap. Tüm VectorChunk tablolarını tarar |
+| `POST` | `/ai/advice` | RAG-based semantic Q&A. Scans all VectorChunk tables |
 
-> 📌 Tüm endpoint'ler **Swagger UI** üzerinden erişilebilir ve test edilebilir.
+> 📌 All endpoints are accessible and testable via the **Swagger UI**.
 
 ---
 
-## 🧰 Teknoloji Yığını
+## 🧰 Tech Stack
 
-| Teknoloji | Kullanım Alanı |
+| Technology | Purpose |
 |---|---|
 | **.NET 9** | Framework (API, Worker, AppHost) |
-| **.NET Aspire** | Servis orkestrasyonu ve gözlemlenebilirlik |
-| **Minimal API** | Endpoint tanımlamaları |
-| **Entity Framework Core 9** | ORM & veritabanı erişimi |
-| **PostgreSQL 16 + pgvector** | İlişkisel veri + vektör depolama |
-| **RabbitMQ** | Mesaj kuyruğu (event-driven) |
-| **MassTransit** | Mesajlaşma altyapısı |
-| **Ollama** | Lokal LLM çalıştırma (Gemma3, nomic-embed-text) |
-| **Semantic Kernel** | AI orkestrasyon, TextChunker, Embedding servisleri |
-| **OllamaSharp** | Ollama API istemcisi |
-| **Pgvector.EntityFrameworkCore** | EF Core üzerinden vektör işlemleri (L2Distance) |
-| **FluentValidation** | İstek doğrulama |
+| **.NET Aspire** | Service orchestration and observability |
+| **Minimal API** | Endpoint definitions |
+| **Entity Framework Core 9** | ORM & database access |
+| **PostgreSQL 16 + pgvector** | Relational data + vector storage |
+| **RabbitMQ** | Message queue (event-driven architecture) |
+| **MassTransit** | Messaging infrastructure |
+| **Ollama** | Local LLM execution (Gemma3, nomic-embed-text) |
+| **Semantic Kernel** | AI orchestration, TextChunker, Embedding services |
+| **OllamaSharp** | Ollama API client |
+| **Pgvector.EntityFrameworkCore** | Vector operations (L2Distance) via EF Core |
+| **FluentValidation** | Request validation |
 
 ---
 
-## 🚀 Başlarken
+## 🚀 Getting Started
 
-### Ön Koşullar
+### Prerequisites
 
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 - [Ollama](https://ollama.com/)
 
-### 1. Altyapı Servislerini Başlatın
+### 1. Start Infrastructure Services
 
 ```bash
 docker-compose up -d
 ```
 
-Bu komut aşağıdaki servisleri ayağa kaldıracaktır:
+This command will start the following services:
 
-| Servis | Port | Açıklama |
+| Service | Port | Description |
 |---|---|---|
-| PostgreSQL (pgvector) | `5432` | Veritabanı (`heliosdb`) |
-| RabbitMQ | `5672` / `15672` | Mesaj kuyruğu / Yönetim paneli |
+| PostgreSQL (pgvector) | `5432` | Database (`heliosdb`) |
+| RabbitMQ | `5672` / `15672` | Message queue / Management UI |
 
-### 2. Ollama Modellerini İndirin
+### 2. Download Ollama Models
 
 ```bash
 ollama pull nomic-embed-text
 ollama pull gemma3:4b
 ```
 
-| Model | Boyut | Kullanım |
+| Model | Size | Usage |
 |---|---|---|
-| `nomic-embed-text` | ~274 MB | Metin embedding (vektör oluşturma) |
-| `gemma3:4b` | ~3.3 GB | Chat / Soru-cevap (LLM) |
+| `nomic-embed-text` | ~274 MB | Text embedding (vector generation) |
+| `gemma3:4b` | ~3.3 GB | Chat / Q&A (LLM) |
 
-### 3. Uygulamayı Çalıştırın
+### 3. Run the Application
 
 ```bash
-# .NET Aspire ile (Api + Worker birlikte)
+# Using .NET Aspire (Starts Api + Worker together)
 dotnet run --project Helios.AppHost
 
-# veya ayrı ayrı
+# Or run them separately
 dotnet run --project Helios.Api
 dotnet run --project Helios.Worker
 ```
 
 ### 4. Swagger UI
 
-Uygulama çalıştıktan sonra Swagger arayüzüne erişebilirsiniz:
+Once the application is running, you can access the Swagger interface at:
 
 ```
 http://localhost:<port>/swagger
@@ -320,9 +320,9 @@ http://localhost:<port>/swagger
 
 ---
 
-## 📁 Yapılandırma
+## 📁 Configuration
 
-`appsettings.json` içinde aşağıdaki ayarları özelleştirebilirsiniz:
+You can customize the following settings in the `appsettings.json` file:
 
 ```json
 {
@@ -336,6 +336,6 @@ http://localhost:<port>/swagger
 
 ---
 
-## 📄 Lisans
+## 📄 License
 
-Bu proje özel kullanım içindir.
+This project is for private use.
