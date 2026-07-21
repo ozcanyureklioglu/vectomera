@@ -184,5 +184,19 @@ public class ProductService : IProductService
 
         return ApiResponse<Guid>.Ok(product.Id, "Ürün başarıyla güncellendi.");
     }
+
+    public async Task<ApiResponse<bool>> DeleteProductAsync(
+        Guid id,
+        CancellationToken cancellationToken = default)
+    {
+        var product = await _context.Products.FirstOrDefaultAsync(p => p.Id == id, cancellationToken);
+        if (product == null)
+            return ApiResponse<bool>.Fail("Ürün bulunamadı.");
+
+        _context.Products.Remove(product);
+        await _context.SaveChangesAsync(cancellationToken);
+
+        return ApiResponse<bool>.Ok(true, "Ürün başarıyla silindi.");
+    }
 }
 

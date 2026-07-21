@@ -1,4 +1,4 @@
-﻿using Vectomera.Application.Common.Models;
+using Vectomera.Application.Common.Models;
 using Vectomera.Application.Features.Products.Dtos;
 using Vectomera.Application.Features.Products.Requests;
 
@@ -24,5 +24,9 @@ public interface IProductService
     /// Mevcut bir Ã¼rÃ¼nÃ¼ gÃ¼nceller. BaÅŸarÄ±lÄ± olunca embedding kuyruÄŸuna mesaj gÃ¶nderir.
     /// </summary>
     Task<ApiResponse<Guid>> UpdateProductAsync(Guid id, UpdateProductRequest request, CancellationToken cancellationToken = default);
-}
 
+    /// <summary>
+    /// Bir Ã¼rÃ¼nÃ¼ siler.
+    /// </summary>
+    Task<ApiResponse<bool>> DeleteProductAsync(Guid id, CancellationToken cancellationToken = default);
+}

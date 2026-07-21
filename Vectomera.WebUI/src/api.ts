@@ -15,6 +15,18 @@ export const api = {
         const response = await apiClient.get(`/products${searchText ? `?searchText=${searchText}` : ''}`);
         return response.data;
     },
+    createProduct: async (product: any) => {
+        const response = await apiClient.post('/products', product);
+        return response.data;
+    },
+    updateProduct: async (id: string, product: any) => {
+        const response = await apiClient.put(`/products/${id}`, product);
+        return response.data;
+    },
+    deleteProduct: async (id: string) => {
+        const response = await apiClient.delete(`/products/${id}`);
+        return response.data;
+    },
 
     // Warehouse Inventory
     getWarehouseInventories: async (productId?: string) => {
@@ -27,6 +39,21 @@ export const api = {
     getReviews: async (productId?: string) => {
         const url = productId ? `/product-reviews?productId=${productId}` : '/product-reviews';
         const response = await apiClient.get(url);
+        return response.data;
+    },
+    createReview: async (review: any) => {
+        // Bulk API endpoint expects a list
+        const response = await apiClient.post('/product-reviews', [review]);
+        return response.data;
+    },
+
+    // Brands & Categories
+    getBrands: async () => {
+        const response = await apiClient.get('/brands');
+        return response.data;
+    },
+    getCategories: async () => {
+        const response = await apiClient.get('/categories');
         return response.data;
     },
 
