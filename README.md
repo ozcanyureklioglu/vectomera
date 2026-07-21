@@ -43,37 +43,54 @@ graph TD
 
 ---
 
-## 🤖 RAG (Retrieval-Augmented Generation) Pipeline
+## 🤖 RAG & Query Decomposition Pipeline
 
-The core of Vectomera' AI capabilities lies within its **RAG** architecture. This flow semantically matches user queries with the most relevant database records, passing them to the LLM as context to generate highly accurate, context-aware, and hallucination-free responses.
+The core of Vectomera's AI capabilities lies within its **RAG** architecture, now supercharged with a **Query Decomposition (Sorgu Çözümleme)** step. Before hitting the vector database, the system analyzes complex user queries, breaks them down into sub-queries, and targets specific database entities for highly precise search results.
 
 ```mermaid
 sequenceDiagram
     participant User as 👤 User
     participant API as Vectomera.Api
     participant AI as AiService
+    participant LLM as Ollama (ChatModel)
     participant EMB as EmbeddingService
     participant PG as PostgreSQL + pgvector
-    participant LLM as Ollama (Gemma3)
 
     User->>API: POST /ai/advice { query }
     API->>AI: GetAdviceAsync(query)
     
-    Note over AI,EMB: 1️⃣ Embedding
-    AI->>EMB: Query → Vector (nomic-embed-text)
-    EMB-->>AI: float[] queryVector
+    Note over AI,LLM: 1️⃣ Query Analysis (Decomposition)
+    AI->>LLM: Analyze Query (Intent Extraction)
+    LLM-->>AI: JSON { vectorSearchList, vectorEntity, entitySearch }
 
-    Note over AI,PG: 2️⃣ Retrieval (Vector Search)
-    AI->>PG: L2Distance search (Top-3 × 3 tables)
-    PG-->>AI: Most relevant chunk texts
+    Note over AI,EMB: 2️⃣ Vector Search (Per Keyword)
+    loop For each keyword in vectorSearchList
+        AI->>EMB: Keyword → Vector (nomic-embed-text)
+        EMB-->>AI: float[] keywordVector
+        
+        Note over AI,PG: Retrieval targeting specific vectorEntities
+        AI->>PG: L2Distance search in targeted Vector Chunk tables (Top-3)
+        PG-->>AI: Relevant chunk texts for keyword
+    end
+    
+    Note over AI: 3️⃣ Deduplication
+    AI->>AI: Deduplicate chunks by ID
 
-    Note over AI,LLM: 3️⃣ Generation
-    AI->>LLM: System Prompt + Context + Query
+    Note over AI,LLM: 4️⃣ Generation
+    AI->>LLM: System Prompt + Context + Original Query
     LLM-->>AI: Synthesized Response
     
     AI-->>API: AiAdviceResponse
     API-->>User: 200 OK { answer }
 ```
+
+### Query Analysis (Decomposition)
+The user's original query is first evaluated by the LLM acting as a "Query Analyser". The LLM breaks down the request into actionable components:
+- **`vectorSearchList`**: Meaningful sub-queries or keywords optimized for vector search (e.g., `["kargo problemi", "ürün hatası"]`).
+- **`vectorEntity`**: Targeted vector chunk tables needed to answer the query (e.g., `["ProductReviewVectorChunk", "ProductVectorChunk"]`).
+- **`entitySearch`**: Direct domain entity mappings.
+
+This structure allows the vector search algorithm to iterate over multiple sub-queries, dynamically searching only the relevant tables, which drastically improves search accuracy and avoids context dilution.
 
 ### Vector Search Tables
 
