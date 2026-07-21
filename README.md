@@ -45,7 +45,7 @@ graph TD
 
 ## 🤖 RAG & Query Decomposition Pipeline
 
-The core of Vectomera's AI capabilities lies within its **RAG** architecture, now supercharged with a **Query Decomposition (Sorgu Çözümleme)** step. Before hitting the vector database, the system analyzes complex user queries, breaks them down into sub-queries, and targets specific database entities for highly precise search results.
+The core of Vectomera's AI capabilities lies within its **RAG** architecture, now supercharged with a **Query Decomposition** step. Before hitting the vector database, the system analyzes complex user queries, breaks them down into sub-queries, and targets specific database entities for highly precise search results.
 
 ```mermaid
 sequenceDiagram
@@ -86,7 +86,7 @@ sequenceDiagram
 
 ### Query Analysis (Decomposition)
 The user's original query is first evaluated by the LLM acting as a "Query Analyser". The LLM breaks down the request into actionable components:
-- **`vectorSearchList`**: Meaningful sub-queries or keywords optimized for vector search (e.g., `["kargo problemi", "ürün hatası"]`).
+- **`vectorSearchList`**: Meaningful sub-queries or keywords optimized for vector search (e.g., `["shipping issue", "product defect"]`).
 - **`vectorEntity`**: Targeted vector chunk tables needed to answer the query (e.g., `["ProductReviewVectorChunk", "ProductVectorChunk"]`).
 - **`entitySearch`**: Direct domain entity mappings.
 
